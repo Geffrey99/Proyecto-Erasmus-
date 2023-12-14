@@ -1,0 +1,93 @@
+#registroCandidato {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #f2f2f2;
+    background-image: url(../img/R.jpg);
+    background-size: cover;
+  }
+.form_candidato {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background: #fff;
+    padding: 25px;
+    border-radius: 9px;
+    box-shadow: 0px 0px 10px 0px rgb(19 238 23 / 19%);
+    width: 600px;
+}
+.form_candidato .columna {
+  flex: 1 0 21%; 
+  margin: 30px;
+  margin-top: -2%;
+}
+  .form-group {
+    width: 100%;
+    text-align: center;
+  }
+  label {
+    display: block;
+    margin-bottom: 5px;
+    margin-top: 23px;
+    font-family: 'Franklin Gothic Medium';
+  }
+  input[class="input_cs"], input[class="input_cs"], input[class="input_cs"], input[class="input_cs"], select {
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #007bff;
+  }
+  input[type="submit"] {
+    background: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 15px;
+    cursor: pointer;
+    margin-top: 30px;
+    font-family: 'Franklin Gothic Medium';
+    width: 123px;
+  }
+
+button#abrir{
+  color: darkblue;
+  border-radius: 20px;
+  position: absolute;
+  /* margin-right: -20px; */
+  /* margin-left: 2%; */
+  margin-top: 1%;
+  background-color: yellowgreen;
+  cursor: pointer;
+}
+
+
+
+/* --------EL MODAL DE LOS DATOS DEL TUTOR ---------------*/
+
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1; 
+    left: 0;
+    top: -20%;
+    width: 100%; 
+    height: auto; 
+    /* overflow: auto; Habilita el scroll si es necesario */
+    /* background-color: rgb(0,0,0); Color de fondo */
+    background-color: rgb(207 17 17 / 40%); /* Color de fondo con opacidad */
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; 
+    padding: 20px;
+    border: 1px solid #888;
+    width: 60%; 
+}
+
+input[class="input_csmodal"] {
+    width: 90%;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #007bff;
+}

@@ -1,0 +1,141 @@
+/* Estilos personalizados */
+
+/* #form-container {
+    width: 50%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px #bbb;
+} */
+#FormSolicitudd {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    align-items: flex-start;
+    width: 80%;
+} 
+/* #formSolicitud {
+    width: 100px;
+    padding: 10px;
+    border: none;
+    border-radius: 50px;
+    background-color: #007BFF;
+    color: #fff;
+    cursor: pointer;
+}  */
+#formSolicitud {
+    width: 200px;
+    padding: 10px;
+    border: none;
+    border-radius: 50px;
+    background-color: #7ab823;
+    color: #fff;
+    cursor: pointer;
+    margin: 10px 0;
+}
+
+/* input[type="text"], input[type="email"] {
+    padding: 10px;
+    font-size: 11px;
+} */
+
+#buttons-container {
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    float: right;
+    margin-top: -450px;
+}
+
+#abrir, #openModal {
+    width: 200px;
+    padding: 10px;
+    border: none;
+    border-radius: 50px;
+    background-color: #007BFF;
+    color: #fff;
+    cursor: pointer;
+    margin: 10px 0;
+}
+
+#capturedImagesContainer {
+    /* width: 30%; */
+    /* margin: 20px auto; */
+    /* padding: 50px; */
+    /* border: 1px solid #ccc; */
+    float: left;
+    margin: 30px auto;
+    margin-left: 40px;
+}
+
+#capturedImagesContainer img {
+    border: 5px solid cadetblue;
+    border-radius: 10px; 
+}
+
+
+#form-container {
+    max-width: 30%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f0ebf9;
+    border-radius: 10px;
+    box-shadow: 0 0 18px rgb(156 249 27 / 10%);
+}
+
+#modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 5%;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+#contenedor {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+}
+
+#canvas {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+
+#player {
+    order: 1; 
+}
+
+#contenedor video {
+    width: 48%; 
+}
+
+#contenedor canvas {
+    order: -1; 
+}

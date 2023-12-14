@@ -1,0 +1,75 @@
+#login {
+    background-image: url('../img/R.jpg'); 
+    background-size: cover;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+#login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+}
+
+#login-form {
+    background-color: rgba(255, 255, 255, 0.8); 
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); 
+    width: 30%;
+}
+
+#login-form h2 {
+    text-align: center;
+    color: #114620;
+    font-family: 'Franklin Gothic Medium';
+}
+
+#login-form div {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0;
+}
+
+#login-form div input[class="dni"]{
+    margin-left: 70px;
+}
+
+#login-form .button-container {
+    display: flex;
+    justify-content: center;
+}
+
+
+#login-form label {
+    display: block;
+    margin: 10px 0;
+}
+
+#login-form input {
+    width: 70%;
+    padding: 10px;
+    margin: 5px auto;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#login-form input[type="submit"] {
+    background-color: #125424; 
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin: 10px auto;
+}
+
+#login-form input[type="submit"]:hover {
+    background-color: #45a049; 
+}
+
+#error-mensaje {
+    color: red;
+    text-align: center;
+    margin-top: 10px;
+}

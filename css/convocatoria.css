@@ -1,0 +1,109 @@
+/**************************************** Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+.form-section {
+    display: inline-block;
+  vertical-align: top;
+  margin-right: 20px;
+  }
+#FormConvocatoria {
+    /* max-width: 900px; */
+    /* margin: 20px auto; */
+    background-color: #e4e4e4;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    /* display: flex; */
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: flex-start;
+}
+
+
+fieldset {
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 4px;
+    /* width: 300px; */
+}
+
+fieldset#convocatoria_baremo_idioma{
+    display: block;
+    /* direction: rtl; */
+    margin-left: 600px;
+    margin-top: -250px;
+}
+
+legend {
+    font-weight: bold;
+    color: #333;
+}
+
+/************************** Estilos para los campos de formulario */
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="date"],
+select {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+}
+
+/************************************************ Estilos para los botones y checkboxes */
+input[type="radio"],
+input[type="checkbox"] {
+    margin-right: 5px;
+}
+
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+th, td {
+    padding: 8px;
+    text-align: left;
+}
+
+/* ************************Estilos para el botooooon */
+.form-butt {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px; 
+  }
+  
+  .form-butt input[type="submit"] {
+    background-color: #4caf50;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .form-butt input[type="submit"]:hover {
+    background-color: #45a049;
+  }

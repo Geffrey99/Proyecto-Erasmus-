@@ -2,7 +2,7 @@
     <script src="./js/convocatorias.js" defer></script>
     <title>Document</title>
 </head>
-<body>
+<body onload="getData()"> <!--AL LLAMAR LA PAGINA ME CARGA LA TABLA -->
 
   <table id="myTable" border="1">
     <tr>
@@ -17,9 +17,10 @@
       <th>Fecha_Lista_Definitiva</th>
       <th>codProyecto</th>
       <th>destino</th>
+      <th>CRUD</th>
     </tr>
   </table>
 
-  <button onclick="getData()">Obtener datos</button>
+  <!-- <button onclick="getData()">Obtener datos</button> -->
 </body>
 </html>

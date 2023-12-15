@@ -49,6 +49,8 @@ switch ($menu) {
                     require_once './interface/escenario/baremacion.php';
                 } elseif ($subpage == 'BaremarSolicitudSeleccionada') {
                     require_once './interface/escenario/baremarSolicitud.php';
+                } elseif ($subpage =='CrudConvocatorias') {
+                    require_once './interface/escenario/tablaConv.php';
                 }
             }
             break;  

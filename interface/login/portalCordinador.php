@@ -39,6 +39,10 @@ if (isset($_POST['logout'])) {
     <div>
         <P title="Crear convocatorias"><a href="?menu=PortalCoordinador&subpage=crearconvocatoria"> <img src="img/convocatoria.png"> </a><p>
     </div>
+    
+    <div>
+    <p title="Crear convocatorias"><a href="?menu=PortalCoordinador&subpage=CrudConvocatorias"> <img src="img/crud.png"> </a><p>
+    </div>
 
     <div>
         <p title="Asignar convocatorias"><a href="?menu=PortalCoordinador&subpage=AsignarConvocatorias"> <img src="img/asignar.png"> </a></p>
@@ -48,7 +52,9 @@ if (isset($_POST['logout'])) {
         <p title="Baremar solicitudes"><a href="?menu=PortalCoordinador&subpage=BaremarSolicitudes"> <img src="img/baremar.png"> </a></p>
     </div>
 
-  
+
+   
+
 
     <div id="cerrarSession">
     <form method="post" action="">

@@ -47,7 +47,9 @@ switch ($menu) {
                     require_once './interface/escenario/asignarConvocatoria.php';
                 } elseif ($subpage == 'BaremarSolicitudes') {
                     require_once './interface/escenario/baremacion.php';
-                } 
+                } elseif ($subpage == 'BaremarSolicitudSeleccionada') {
+                    require_once './interface/escenario/baremarSolicitud.php';
+                }
             }
             break;  
     case '':

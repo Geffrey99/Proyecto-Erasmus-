@@ -1,3 +1,6 @@
+//###############################################################################################
+//########____________FOTO______________________________________
+//##############################################################################################
 window.addEventListener("load", function () {
     const player = document.getElementById('player');
     const canvas = document.getElementById('canvas');
@@ -10,7 +13,7 @@ window.addEventListener("load", function () {
     const recuadro = document.getElementById('recuadro');
     const capturedImagesContainer = document.getElementById('capturedImagesContainer');
 
-    let stream; // Variable para almacenar el stream de la cámara.
+    let stream; //-----------Variable para almacenar el stream de la cámara
 
     const constraints = {
         video: true,
@@ -18,7 +21,7 @@ window.addEventListener("load", function () {
 
     openModalButton.addEventListener('click', function () {
         modal.style.display = 'block';
-        // Inicia la cámara cuando se abre el modal.
+        // Inicia la cámara cuando se abre el modaaal................................
         navigator.mediaDevices.getUserMedia(constraints).then((s) => {
             stream = s;
             player.srcObject = s;
@@ -26,7 +29,7 @@ window.addEventListener("load", function () {
     });
 
     closeModalButton.addEventListener('click', function () {
-        // Detén la cámara cuando se cierra el modal.
+        // y ahora se detiene la camara................
         if (stream) {
             stream.getTracks().forEach((track) => {
                 track.stop();
@@ -36,30 +39,28 @@ window.addEventListener("load", function () {
     });
 
     captureButton.addEventListener('click', () => {
-        // Dibuja el fotograma del vídeo en el canvas.
+        // dibuja el fotograma del vídeo en el canvas....................
         context.drawImage(player, 0, 0, canvas.width, canvas.height);
 
-        // Crea una nueva instancia de Recuadro.
+        // Esto crea una nueva instancia de Recuadro.......................
         var recuadroObj = new Recuadro(0, 0, 100, 200, canvas);
         recuadroObj.pinta();
 
-        // Cuando se suelta el ratón, recorta la imagen y la almacena en el campo oculto.
+        // Cuando se suelta el ratón, recorta la imagen y la almacena en el campo oculto...........
         recuadroObj.dom.addEventListener('mouseup', () => {
             var recortado = recuadroObj.recortar();
             document.getElementById('captured_image').value = recortado;
 
-            // Crea un nuevo elemento de imagen y establece su atributo src con la URL de datos de la imagen recortada.
+            // Se crea un nuuuevo elemento imagen
             var img = document.createElement('img');
             img.src = recortado;
-
-            // Añade la imagen al contenedor específico para las imágenes recortadas.
             capturedImagesContainer.innerHTML = '';
             capturedImagesContainer.appendChild(img);
         });
     });
 
     contenedor.addEventListener('mousemove', (event) => {
-        // Actualiza la posición del recuadro con la posición del ratón.
+        // Actualiza la posición del recuadro con la posición del ratón.................
         recuadro.style.left = event.offsetX - recuadro.clientWidth / 2 + 'px';
         recuadro.style.top = event.offsetY - recuadro.clientHeight / 2 + 'px';
     });
@@ -134,18 +135,18 @@ window.addEventListener("load", function () {
     };
 
     Recuadro.prototype.recortar = function () {
-        // Crea un nuevo canvas para el recorte.
+        // Crea un nuevo canvas para el recorte..........................
         var recorteCanvas = document.createElement('canvas');
         var recorteContext = recorteCanvas.getContext('2d');
 
-        // Ajusta el tamaño del canvas de recorte al tamaño del recuadro.
+        // See ajusta el tamaño del canvas de recorte al tamaño del recuadro.........
         recorteCanvas.width = this.ancho;
         recorteCanvas.height = this.alto;
 
-        // Dibuja la parte de la imagen original que corresponde al recuadro en el canvas de recorte.
+        // See dibuja la parte de la imagen original que corresponde al recuadro en el canvas de recorte........
         recorteContext.drawImage(this.imagen, this.x, this.y, this.ancho, this.alto, 0, 0, this.ancho, this.alto);
 
-        // Convierte el recorte a una URL de datos (base64) y la devuelve.
+        // Convierte el recorte a una URL de datos (base64) y la devuelve.........
         return recorteCanvas.toDataURL();
     };
 });

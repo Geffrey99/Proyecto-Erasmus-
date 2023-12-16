@@ -1,22 +1,25 @@
 <head>
-    <script src="./js/convocatorias.js" defer></script>
-    <title>Document</title>
-</head>
-<body onload="getData()"> <!--AL LLAMAR LA PAGINA ME CARGA LA TABLA -->
+    <script src="./js/convocatoriasCRUD.js" defer></script>
+    <link rel="stylesheet" type="text/css" href="./css/crud.css">
 
+</head>
+<body onload="getData()"> <!-------------AL LLAMAR LA PAGINA ME CARGA LA TABLA-------------------------------->
   <table id="myTable" border="1">
+  <tr>
+    <th colspan="12" title="TABLA CRUD CONVOCATORIAS">CONVOCATORIAS</th> 
+  </tr>
     <tr>
-      <th>Id_Convocatoria</th>
-      <th>movilidades</th>
-      <th>tipo</th>
-      <th>fechaInicio_Solicitudes</th>
-      <th>fechaFin_Solicitudes</th>
-      <th>fechaInicio_Pruebas</th>
-      <th>fechaFin_Pruebas</th>
-      <th>Fecha_Lista_Provisional</th>
-      <th>Fecha_Lista_Definitiva</th>
-      <th>codProyecto</th>
-      <th>destino</th>
+      <th title="id_convocatoria">Id.</th>
+      <th title="NUMERO DE PLAZAS">MOVILIDADES</th>
+      <th title="(-+)90DIAS">TIPO</th>
+      <th title="INICIO SOLICITUDES" >fechaInicio_Solicitudes</th>
+      <th title="FIN SOLICITUDES">fechaFin_Solicitudes</th>
+      <th title="INICIO PRUEBAS">fechaInicio_Pruebas</th>
+      <th title="FIN PRUEBAS">fechaFin_Pruebas</th>
+      <th title="LISTA PROVISIIONAL">Fecha_Lista_Provisional</th>
+      <th title="FECHA LISTA DEFINITIVA">Fecha_Lista_Definitiva</th>
+      <th title="CODIGO DEL PROYECTO">PROYECTO</th>
+      <th>DESTINO</th>
       <th>CRUD</th>
     </tr>
   </table>

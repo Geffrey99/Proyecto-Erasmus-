@@ -67,7 +67,7 @@ $response = ARRAY();
   // var_dump($candidato);
 
   if (candidatoRepos::ExisteDni($dni_Candidato)) {
-    $response['candidato'] = array('success' => false, 'message' => 'El DNI del candidato ya existe en la base de datos.');
+    $response['candidato'] = array('success' => false, 'message' => 'El DNI del candidato ya existe en la base de datos');
     echo json_encode($response);
     exit();
   } else {

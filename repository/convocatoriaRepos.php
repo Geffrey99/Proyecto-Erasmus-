@@ -89,37 +89,6 @@ Class convocatoriaRepos {
     
 
 
-    public static function modificarConvocatoria($id_convocatoria, $Convocatoria) {
-        Database::abreConexion();
-        $conexion = Database::getConexion()->prepare('UPDATE Convocatoria SET 
-            movilidades = :movilidades, 
-            tipo = :tipo, 
-            FechaInicio_Solicitudes = :FechaInicio_Solicitudes, 
-            FechaFin_Solicitudes = :FechaFin_Solicitudes, 
-            FechaInicio_Pruebas = :FechaInicio_Pruebas, 
-            FechaFin_Pruebas = :FechaFin_Pruebas, 
-            Fecha_Lista_Provisional = :Fecha_Lista_Provisional, 
-            Fecha_Lista_Definitiva = :Fecha_Lista_Definitiva, 
-            codProyecto = :codProyecto, 
-            destino = :destino 
-            WHERE Id_Convocatoria = :id_convocatoria');
-        $conexion->execute([
-            'id_convocatoria'=>$id_convocatoria,
-            'movilidades'=>$Convocatoria->getMovilidades(),
-            'tipo'=>$Convocatoria->getTipo(),
-            'FechaInicio_Solicitudes'=>$Convocatoria->getFechaInicio_Solicitudes(),
-            'FechaFin_Solicitudes'=>$Convocatoria->getFechaFin_Solicitudes(),
-            'FechaInicio_Pruebas'=>$Convocatoria->getFechaInicio_Pruebas(),
-            'FechaFin_Pruebas'=>$Convocatoria->getFechaFin_Pruebas(), 
-            'Fecha_Lista_Provisional'=>$Convocatoria->getFecha_Lista_Provisional(),
-            'Fecha_Lista_Definitiva'=>$Convocatoria->getFecha_Lista_Definitiva(), 
-            'codProyecto'=>$Convocatoria->getcodProyecto(),
-            'destino'=>$Convocatoria->getdestino(), 
-        ]);
-        Database::desconexion();
-    }
-
-
 
 
 

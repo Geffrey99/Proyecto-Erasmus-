@@ -13,7 +13,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
   $dni_TutorLegal = null; // Por si el alumno es mayor de edad 
 
-$response = ARRAY();
+  $response = array(
+    'candidato' => array('success' => false, 'message' => ''),
+    'tutorLegal' => array('success' => true, 'message' => '')
+);
 
   if ($edad < 18) {
     //tabla TutorLegal por si es menor el candidato 
@@ -33,7 +36,9 @@ $response = ARRAY();
    
     if (!TutorLegalRepos::ExisteDniTutor($dni_TutorLegal)) {
       TutorLegalRepos::añadirTutorLegal($TutorLegal);
-      $response['tutorLegal'] = array('success' => true, 'message' => '');
+  } else {
+      $response['tutorLegal']['success'] = false;
+      $response['tutorLegal']['message'] = 'El DNI del tutor legal ya existe en la base de datos';
   }
 }
   
@@ -77,17 +82,5 @@ $response = ARRAY();
 
 echo json_encode($response); // Envía la respuesta completa al final
 }
-
-
-
-
-  // if (candidatoRepos::ExisteDni($dni_Candidato)) {
-  //   echo json_encode(['success' => false, 'message' => 'El DNI del candidato ya existe en la base de datos.']);
-
-  // } else {
-  //   echo json_encode(['success' => true, 'message' => '']);
-  //    CandidatoRepos::añadirCandidato($candidato);
-
-  // }
 
 ?>

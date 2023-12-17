@@ -71,18 +71,21 @@ button#abrir{
     left: 0;
     top: -20%;
     width: 100%; 
-    height: auto; 
+    /* height: auto;  */
     /* overflow: auto; Habilita el scroll si es necesario */
     /* background-color: rgb(0,0,0); Color de fondo */
     background-color: rgb(207 17 17 / 40%); /* Color de fondo con opacidad */
-}
+font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+
+  }
 
 .modal-content {
-    background-color: #fefefe;
+    background-color: #c1bfbf;
     margin: 15% auto; 
     padding: 20px;
     border: 1px solid #888;
-    width: 60%; 
+    width: 30%; 
 }
 
 input[class="input_csmodal"] {
@@ -90,4 +93,33 @@ input[class="input_csmodal"] {
     padding: 10px;
     border-radius: 10px;
     border: 1px solid #007bff;
+}
+
+
+span.close{
+  font-size: xx-large;
+  color: red;
+  border-radius: 90%;
+  border: dotted;
+  cursor: pointer;
+}
+
+
+#guardar{
+  padding: 5px;
+  margin-top: 10px;
+  font-size: 20px;
+  margin-left: 40%;
+  border-radius: 10px;
+  border-bottom: goldenrod;
+  background-color: black;
+  color: goldenrod;
+  background-blend-mode: color-dodge;
+  cursor: pointer;
+}
+
+#guardar:hover {
+background-color: #888;
+color: rgb(255, 200, 59);
+cursor: pointer;
 }

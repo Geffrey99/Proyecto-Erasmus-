@@ -1,5 +1,7 @@
+//###########__REGISTRO CANDIDATO__######################################################
 
 
+//-----------Miro haber si es menor o mayor para que rellene los datos del tutor 
     document.getElementById('fecha_nac_Candidato').addEventListener('change', function () {
         var fechaNacimiento = new Date(this.value);
         var fechaActual = new Date();
@@ -16,10 +18,10 @@
         var abrir_modal = document.getElementById('abrir');
         if (edad < 18) {
             error.textContent = 'Se necesita datos del tutor';
-            abrir_modal.style.display = 'inline'; // Muestra el botón
+            abrir_modal.style.display = 'inline'; //-- Muestra el botón
         } else {
             error.textContent = '';
-            abrir_modal.style.display = 'none'; // Oculta el botón
+            abrir_modal.style.display = 'none'; //--Oculta el botón
         }
         
     });
@@ -37,6 +39,9 @@ document.getElementsByClassName('close')[0].onclick = function() {
 }
 
 
+document.getElementById('guardar_info').addEventListener('click',function(){
+    document.getElementById('modal').style.display='none';
+})
 
 
 
@@ -220,6 +225,10 @@ var formData = new FormData(this);
         if (!data.tutorLegal.success) {
             // Muestra el mensaje de error del tutor
             document.getElementById('error_dni_tutor').textContent = data.tutorLegal.message;
+        }
+        if (data.candidato.success && data.tutorLegal.success){
+            //si no hay errores y todo ok
+            window.location.href = "http://localhost/becas/index.php?menu=registroTerminado";
         }
     })
     .catch(error => console.error('Error:', error));

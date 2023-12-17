@@ -2,6 +2,7 @@
     <link rel="stylesheet" href="css/solicitud.css">
     <script src="js/foto.js" defer></script>
     <script src="js/pdf.js" defer></script>
+    <script src="js/solicitud.js" defer></script>
 </head>
 
 <body id="BodySolicitud" >
@@ -17,7 +18,7 @@
         <form method="post" id="FormSolicitudd" action="./api/insertSolicitud.php" enctype="multipart/form-data">
             <!--SE AUTORELLENA EL CAMPO DEL DNI CON EL INICIO DE SESION--->
             <label for="dni_Candidato">DNI:</label>
-            <input type="text" id="dni_Candidato" name="dni_Candidato" value="<?php echo $dni; ?>"><br>
+            <input type="text" id="dni_Candidato" name="dni_Candidato" value="<?php echo $dni; ?>" readonly><br>
 
             <label for="ID_CONVOCATORIA">CONVOCATORIAS:</label>
             <select id="ID_CONVOCATORIA" name="ID_CONVOCATORIA">
@@ -37,16 +38,20 @@
             </select><br>
 
             <label for="TELEFONO">TELEFONO:</label>
-            <input type="text" id="TELEFONO" name="TELEFONO"><br>
-
+            <input type="text" id="TELEFONO" name="TELEFONO">
+            <span id="error_TELEFONO" style="color: red;"></span><br>
+            
             <label for="EMAIL">EMAIL:</label>
-            <input type="email" id="EMAIL" name="EMAIL"><br>
+            <input type="email" id="EMAIL" name="EMAIL">
+            <span id="error_EMAIL" style="color: red;"></span><br>
 
             <label for="DOMICILIO">DOMICILIO:</label>
-            <input type="text" id="DOMICILIO" name="DOMICILIO"><br>
+            <input type="text" id="DOMICILIO" name="DOMICILIO">
+            <span id="error_DOMICILIO" style="color: red;"></span><br>
 
             <label for="OTRO_PDF">Informe de idoneidad:</label>
-            <input type="file" id="OTRO_PDF" name="OTRO_PDF" accept="application/pdf"><br>
+            <input type="file" id="OTRO_PDF" name="OTRO_PDF" accept="application/pdf">
+            <span id="error_OTRO_PDF" style="color: red;"></span><br>
 
             <!-- Aquí está el campo oculto para la imagen capturada -->
             <input type="hidden" id="captured_image" name="captured_image">

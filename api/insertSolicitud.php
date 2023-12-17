@@ -27,8 +27,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $FOTO
     );
 
-    
-    SolicitudRepos::añadirSolicitud($solicitud);
+    //me devuelve el id_solicitud
+    $id_solicitud = SolicitudRepos::añadirSolicitud($solicitud);
 
     $imagen_codificada = $_POST['captured_image'];
 
@@ -60,7 +60,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     </head>
     <body>
 
-    <h2>Datos de la solicitud</h2>
+    <h2>Datos de la solicitud: '. $id_solicitud .'</h2>
     <p>DNI Candidato: ' . $dni_Candidato . '</p>
     <p>Convocatoria: ' . $ID_CONVOCATORIA . '</p>
     <p>Grupo: ' . $DESTINATARIO . '</p>
@@ -79,15 +79,18 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $mipdf->render();
     $pdf = $mipdf->output();
 
-// Guarda el PDF en carpeta del candidato 
-$ruta_pdf = '../pdfs/' . $dni_Candidato . '.pdf';
+// Guarda la solicitud con el id_solicitud--------Porque puede echa mas solicitudes
+$ruta_pdf = '../pdfs/' . $id_solicitud . '.pdf';
 file_put_contents($ruta_pdf, $pdf);
 
-// Muestra el PDF en el navegador
+// Muestra el PDF en el navegador, pero tampoco me funciona
 //$mipdf->stream("solicitud.pdf", ["Attachment" => 0]);
-header("Location: http://localhost/becas/index.php?menu=PortalCandidato");
+//lo descarga directamente pero no me funciona, funciona pero no se ve
+ //$mipdf->stream($id_solicitud . '.pdf', ["Attachment" => 1]);
+ header("Location: http://localhost/becas/index.php?menu=PortalCandidato");
 }
 ?>
 
 
-<!--EN ESTE CASO ME FALTARIA ENVIARLO POR CORREO Y SE QUEDARIA LISTO---->
+<!--EN ESTE CASO ME FALTARIA ENVIARLO POR CORREO
+ Y SE QUEDARIA LISTO---->

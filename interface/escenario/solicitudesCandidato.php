@@ -1,5 +1,6 @@
 <head>
 <link href="css/solicitudesCandidato.css" rel="stylesheet" type="text/css" />
+<script src="./js/verSolicitud.js" defer></script>
 </head>
 
 <?php
@@ -33,9 +34,17 @@ $solicitudes = Obtenersolicitud::ObtenerSolicitudes($dni_Candidato);
 <td><?= $convocatoria['tipo'] ?></td>
 <td><?= $convocatoria['codProyecto'] ?></td>
 <td><?= $convocatoria['destino'] ?></td>
-<td><button class="btn" onclick="">Ver Solicitud</button></td>
-<!-- <td><button class="btn" onclick="location.href='ver_solicitud.php?id=<?= $solicitud['ID_SOLICITUD'] ?>'">Ver Solicitud</button></td> -->
+<!-- obtengo el id_solicitud con el boton para buscarla en mi carpeta de pdfs y me muestre la solicitud-->
+<td><button type='button' class='btn' onclick='abrirModal(<?= $solicitud['ID_SOLICITUD'] ?>)'>Ver Documentacion</button></td>
+
         </tr>
     <?php endforeach; ?>
 </table>
 
+
+<div id="myModal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <iframe id="pdfViewer" src="" width="100%" height="100%"></iframe>
+  </div>
+</div>

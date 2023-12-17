@@ -19,6 +19,10 @@ switch ($menu) {
         require_once './interface/principal/principal.php';
         require_once './interface/escenario/registroCandidato.php';
         break;
+    case 'registroTerminado':
+        require_once './interface/principal/principal.php';
+        require_once './interface/escenario/todoOk.php';
+        break;
     case 'convocatorias':
         require_once './interface/principal/principal.php';
         require_once './interface/escenario/tablaConv.php';

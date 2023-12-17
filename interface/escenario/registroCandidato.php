@@ -38,7 +38,7 @@
 
 <div class="columna">
     <label for="telefono_Candidato">Teléfono:</label><br>
-    <input type="text" id="telefono_Candidato" class="input_cs" name="telefono_Candidato" maxlength="15"><br>
+    <input type="text" id="telefono_Candidato" class="input_cs" name="telefono_Candidato" maxlength="9"><br>
     <span id="error_telefono" style="color: red;"></span>
 
     <label for="correo_Candidato">Correo:</label><br>
@@ -89,8 +89,9 @@
             <label for="domicilio_TutorLegal">Domicilio:</label><br>
             <input type="text" id="domicilio_TutorLegal" class="input_csmodal" name="domicilio_TutorLegal" maxlength="50"><br> 
             <span id="error_domicilio_tutor" class="inputError" style="color: red;"></span>
+            
             <div id="guardar_info">
-            <input type="button" value="guardar">
+            <input type="button" id="guardar" value="GUARDAR">
             </div>
         </fieldset>
     </div>

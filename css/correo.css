@@ -1,0 +1,48 @@
+#correoErazmuz {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('../img/R.jpg'); 
+    background-size: cover;
+}
+#formCorreo {
+    background-color: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
+    margin-block: 20px;
+}
+
+#formCorreo fieldset legend {
+    font-size: larger;
+    font-family: fantasy;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+#enviaCorreo {
+    background-color: black;
+    color: white;
+    cursor: pointer;
+}
+#enviaCorreo[type="submit"]:hover {
+    background-color: grey;
+}
+
+.mensaje-exito {
+    color: rgb(3, 105, 10);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+}
+
+.mensaje-error {
+    color: red;
+    font-family: monospace;
+    
+}

@@ -38,15 +38,15 @@
             </select><br>
 
             <label for="TELEFONO">TELEFONO:</label>
-            <input type="text" id="TELEFONO" name="TELEFONO">
+            <input type="text" id="TELEFONO" name="TELEFONO" placeholder="666444333">
             <span id="error_TELEFONO" style="color: red;"></span><br>
             
             <label for="EMAIL">EMAIL:</label>
-            <input type="email" id="EMAIL" name="EMAIL">
+            <input type="email" id="EMAIL" name="EMAIL" placeholder="quienseas@gmail.com">
             <span id="error_EMAIL" style="color: red;"></span><br>
 
             <label for="DOMICILIO">DOMICILIO:</label>
-            <input type="text" id="DOMICILIO" name="DOMICILIO">
+            <input type="text" id="DOMICILIO" name="DOMICILIO" placeholder="C/dondevivas 9 Jaen">
             <span id="error_DOMICILIO" style="color: red;"></span><br>
 
             <label for="OTRO_PDF">Informe de idoneidad:</label>

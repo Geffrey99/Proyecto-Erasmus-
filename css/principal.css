@@ -113,6 +113,11 @@ body {
     background-color: transparent;
 }
 
+#cerrarSession >form button.logout {
+background: transparent;
+border: none;
+cursor: pointer;
+}
 
 #opciones {
   display: none;

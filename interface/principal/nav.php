@@ -4,7 +4,7 @@
 </div>
 
 <div>
-    <p title="Convocatorias"><a href="?menu=convocatorias"> <img src="img/documento.png"> </a></p>
+    <p title="Envia un correo"><a href="?menu=correo"> <img src="img/email.png"> </a></p>
 </div>
 
 <div id="menuDesplegable">

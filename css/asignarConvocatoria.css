@@ -132,7 +132,7 @@ select:focus {
     box-shadow: 0 9px #cc024663;
     position: absolute;
     margin-left: 70%;
-    margin-top:-120%;
+    margin-top:-90%;
 }
 
 #myBtn:hover {background-color: #cc8ad8;}

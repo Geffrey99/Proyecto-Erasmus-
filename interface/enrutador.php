@@ -23,9 +23,9 @@ switch ($menu) {
         require_once './interface/principal/principal.php';
         require_once './interface/escenario/todoOk.php';
         break;
-    case 'convocatorias':
+    case 'correo':
         require_once './interface/principal/principal.php';
-        require_once './interface/escenario/tablaConv.php';
+        require_once './interface/principal/correo.php';
         break;   
     case 'PortalCandidato':
         require_once './interface/login/portalCandidato.php';    

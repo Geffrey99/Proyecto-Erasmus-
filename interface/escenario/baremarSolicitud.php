@@ -1,11 +1,9 @@
 <?php
-// Primero, necesitas conectar a tu base de datos.
-// Asegúrate de reemplazar 'nombre_base_de_datos', 'nombre_usuario' y 'contraseña' con tus propios valores.
-// $db = new PDO('mysql:host=localhost;dbname=nombre_base_de_datos', 'nombre_usuario', 'contraseña');
+
 include_once 'helper/autocargar.php';
 include_once 'db.php';
 Database::abreConexion();
-// Luego, ejecuta tu consulta SQL.
+
 $query = "
     SELECT 
         C.Id_Convocatoria AS 'ID Convocatoria',
@@ -25,7 +23,7 @@ $query = "
 ";
 $result = $db->query($query);
 
-// Ahora, puedes mostrar los resultados en una tabla.
+
 echo "<table border='1'>";
 echo "<tr><th>ID Convocatoria</th><th>Nombre ItemBaremo</th><th>Valor Mínimo</th><th>Valor Máximo</th><th>URL</th><th>Nota</th><th>Actualizar Nota</th></tr>";
 while ($row = $result->fetch(PDO::FETCH_ASSOC)) {
